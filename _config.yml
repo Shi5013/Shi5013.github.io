@@ -1,7 +1,7 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
+title: Shi Wenwei's Blog
+description: 测试中文
+url: https://github.com/Shi5013
 avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
@@ -29,11 +29,11 @@ exclude:
 
 # Optimize Jekyl SEO Tag
 twitter:
-  username: vszhub
+  username: sww
   card: summary
 logo: logo.png
 social:
-  name: Songzi Vong
+  name: Shi Wenwei
   links:
     - https://twitter.com/vszhub
     - https://github.com/vszhub
@@ -54,6 +54,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Shi Wenwei
+  url: https://github.com/Shi5013
+  email: wwshi0428@outlook.com
