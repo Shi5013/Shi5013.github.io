@@ -3,7 +3,7 @@ layout: post
 title: SSH 密钥、公钥私钥、known_hosts 是什么
 tags: record
 math: false
-date: 2026-6-16 14:30 +0800
+date: 2026-6-16 15:28 +0800
 ---
 
 从一次 `git clone` 的报错说起，搞清楚 SSH 密钥体系的三个核心问题：公钥私钥是什么、known_hosts 干什么用、以及同一个密钥能否用于多个服务。

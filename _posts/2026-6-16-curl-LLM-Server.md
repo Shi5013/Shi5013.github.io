@@ -3,7 +3,7 @@ layout: post
 title: curl访问大模型服务
 tags: record
 math: true
-date: 2026-3-09 9:13 +0800
+date: 2026-6-16 14:30 +0800
 ---
 
 在日常使用过程中，无论内网还是外网，是如何访问大模型服务的？
