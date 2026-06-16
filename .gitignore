@@ -42,5 +42,8 @@ validation-report.json
 # Folders to ignore
 node_modules
 
+# Claude
+.claude/
+
 # Ruby gems
 *.gem
