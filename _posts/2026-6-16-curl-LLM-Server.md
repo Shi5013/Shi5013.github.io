@@ -44,17 +44,51 @@ curl http://10.4.65.6:3000/v1/chat/completions \
 
 用curl访问大模型API和访问普通网页的原理完全一样，都是标准的HTTP请求。
 
-|   对比项    |         访问普通网页          |            访问大模型 API             |
-| :------: | :---------------------: | :------------------------------: |
-|  **协议**  |       HTTP/HTTPS        |         HTTP/HTTPS（完全一样）         |
-| **请求方法** |      GET（浏览器输入网址）       |          POST（发送数据给模型）           |
-| **请求头**  | `User-Agent`、`Accept` 等 | `Content-Type`、`Authorization` 等 |
-| **请求体**  |          通常为空           |          JSON 格式的提示词和参数          |
-|  **响应**  |         HTML 网页         |           JSON 格式的模型回答           |
-| **网络传输** |        走 TCP/IP         |          走 TCP/IP（完全一样）          |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: center">对比项</th>
+      <th style="text-align: center">访问普通网页</th>
+      <th style="text-align: center">访问大模型 API</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: center"><strong>协议</strong></td>
+      <td style="text-align: center">HTTP/HTTPS</td>
+      <td style="text-align: center">HTTP/HTTPS（完全一样）</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>请求方法</strong></td>
+      <td style="text-align: center">GET（浏览器输入网址）</td>
+      <td style="text-align: center">POST（发送数据给模型）</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>请求头</strong></td>
+      <td style="text-align: center"><code>User-Agent</code>、<code>Accept</code> 等</td>
+      <td style="text-align: center"><code>Content-Type</code>、<code>Authorization</code> 等</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>请求体</strong></td>
+      <td style="text-align: center">通常为空</td>
+      <td style="text-align: center">JSON 格式的提示词和参数</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>响应</strong></td>
+      <td style="text-align: center">HTML 网页</td>
+      <td style="text-align: center">JSON 格式的模型回答</td>
+    </tr>
+    <tr>
+      <td style="text-align: center"><strong>网络传输</strong></td>
+      <td style="text-align: center">走 TCP/IP</td>
+      <td style="text-align: center">走 TCP/IP（完全一样）</td>
+    </tr>
+  </tbody>
+</table>
 
 
 大模型API服务本质上是一个运行在服务器上的Web服务。唯一的区别是请求体(Payload)，普通网页GET请求没有请求体，而大模型API是POST请求，需要在`-d`参数中发送JSON格式的指令。
+
 
 不止是内网中的，访问Deepseek这些平台也是一样的。只不过背后并不是用 New API 这类开源网关搭建的，而是它们**自己研发的、企业级的大规模分布式系统**。两者的目标和技术复杂度完全不在一个量级上。
 
