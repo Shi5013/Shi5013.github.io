@@ -47,3 +47,5 @@ node_modules
 
 # Ruby gems
 *.gem
+
+codex_resume.txt
